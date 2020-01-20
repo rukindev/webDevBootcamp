@@ -3,22 +3,27 @@
 <head>
 	<title>Web Forms</title>
 
-	<link rel="stylesheet" type="text/css" href="Webforms.css">
+	<!-- <link rel="stylesheet" type="text/css" href="Webforms.css"> -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 </head>
 
 <body>
+<div class="container">
 
-<h1>HTML Forms</h1>
-
-<p> 
+	<h1>HTML Forms</h1>
+	
+	<p> 
 	Web forms are a very powerful tool for interacting with users — most commonly they are used for collecting data from users, or allowing them to control a user interface. </p>
 
-<p>	Web forms are one of the main points of interaction between a user and a web site or application. Forms allow users to enter data, which is generally sent to a web server for processing and storage, or used on the client-side to immediately update the interface in some way.</p>
-<p>
+	<p>	Web forms are one of the main points of interaction between a user and a web site or application. Forms allow users to enter data, which is generally sent to a web server for processing and storage, or used on the client-side to immediately update the interface in some way.</p>
+	<p>
 	A web form's HTML is made up of one or more form controls (sometimes called widgets), plus some additional elements to help structure the overall form — they are often referred to as HTML forms. The controls can be single or multi-line text fields, dropdown boxes, buttons, checkboxes, or radio buttons, and are mostly created using the < input > element, although there are some other elements to learn about too.</p>
-<br>
-<br>
+	<br>
+	<hr>
+	<br>
+
 <!-- We will use the following HTML elements: <form>, <label>, <input>, <textarea>, and <button>. -->
 
 <!-- <form action="/my-handling-form-page" method="post"> </form> -->
@@ -38,24 +43,26 @@ placeholder: fill temporarely what the form field required-->
 	'Required' attribute validates that an input is not empty -->
 
 	<form action="/my-handling-form-page" method="post">
- <ul>
-  <li>
-    <label for="name">Name:</label>
-    <input type="text" placeholder="John Doe" id="name" name="user_name">
-  </li>
-  <li>
-    <label for="mail">E-mail:</label>
-    <input type="email" placeholder="your@email" id="mail" name="user_mail" required>
-  </li>
-  <li>
-    <label for="msg">Message:</label>
-    <textarea  placeholder="type your message here" id="msg" name="user_message"></textarea>
-  </li>
-  <li class="button">
-  <button type="submit">Send your message</button>
-  </li>
- </ul>
-</form>
+	<div class="form-group row">
+		<label for="name" class="col-sm-2 col-form-label">Name:</label>
+		<div class="col-sm-10">
+			<input type="text" class="form-control" placeholder="John Doe" id="name" name="user_name">
+		</div>
+	</div>
+	<div class="form-group row">
+		<label for="mail" class="col-sm-2 col-form-label">E-mail:</label>
+		<div class="col-sm-10">
+			<input type="email" class="form-control" placeholder="your@email" id="mail" name="user_mail" required>
+		</div>
+	</div>
+	<div class="form-group row">
+		<label for="msg" class="col-sm-2 col-form-label">Message:</label>
+		<div class="col-sm-10">
+			<textarea  class="form-control" placeholder="type your message here" id="msg" name="user_message" rows="3"></textarea>
+		</div>
+	</div>
+		<button type="submit" class="btn btn-secondary">Send</button>
+	</form>
 <!-- The <button> element also accepts a type attribute — this accepts one of three values: submit, reset, or button.
 	Submit button (the default value) sends the form's data to the web page defined by the action attribute of the <form> element.
 	Reset button resets all the form widgets to their default value immediately. From a UX point of view, this is considered bad practice, so you should avoid using this type of button unless you really have a good reason to include one.
@@ -64,83 +71,142 @@ placeholder: fill temporarely what the form field required-->
 	<!-- pattern="[A-Za-z0-9]{6,12}" letters and numbers between 6 to 12 characters in the password entry field
 	Title="Only letters & No between 6 and 12 characters" to show at alert box if the user didn't attend the request.
 	 ** inputmode="numeric" if the requirement of the password is to be numeric (such as PIN)-->
-<br>
-<br>
-<h3>A Simple Login Form</h3>
-<form class="buble" action="/sign-in-url" method="post">
-<ul>
-	<li>
-		<label for="name">Name:</label>
-		<input id="name/email" type="text"  name="user_name" placeholder="username or email" required>
-	</li>	
-	<li>
-		<label for="password">Password:</label>
-		<input id="password" type="password"  name="password" pattern="[A-Za-z0-9]{6,12}" title=" Only letters & No between 6 and 12 characters" placeholder="password"required>
-	</li>
-	<li class="button">
-		<button type="submit">Login</button>
-	</li>
-</ul>
+	<br>
+	<hr>
+	<br>
+	<h3>A Simple Login Form</h3>
+	
+	<form>
+		<div class="form-group">
+	    	<label for="exampleInputEmail1">Email address</label>
+	    	<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="your@email.address" required>
+	    	<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+	  	</div>
+	  	<div class="form-group">
+	    	<label for="exampleInputPassword1">Password</label>
+	    	<input type="password" class="form-control" id="Password" pattern="[A-Za-z0-9]{6,12}" title=" Only letters & No between 6 and 12 characters" placeholder="password" required>
+	  	</div>
+	  	<div class="form-group form-check">
+	    	<input type="checkbox" class="form-check-input" id="exampleCheck1">
+	    	<label class="form-check-label" for="exampleCheck1">Check me out</label>
+	  	</div>
+	  	<button type="submit" class="btn btn-primary">Submit</button>
+	</form>
+
+
+<!-- 	<form class="buble" action="/sign-in-url" method="post">
+		<ul>
+			<li>
+				<label for="name">Name:</label>
+				<input id="name/email" type="text"  name="user_name" placeholder="username or email" required>
+			</li>	
+			<li>
+				<label for="password">Password:</label>
+				<input id="password" type="password"  name="password" pattern="[A-Za-z0-9]{6,12}" title=" Only letters & No between 6 and 12 characters" placeholder="password"required>
+			</li>
+			<li class="button">
+				<button type="submit">Login</button>
+			</li>
+		</ul>
+	</form> -->
+	<br>
+	<hr>
+	<br>
+
+	<h3>&lt;input type="text","date","color","file","checkbox"&gt;</h3>
+	<form action="/sign-in-url" method="post">
+	<div class="form-group row">
+		<label for="text" class="col-sm-2 col-form-label">text:</label>
+		<div class="col-sm-10">
+			<input type="text" class="form-control" placeholder="Your text here" id="name" name="user_text">
+		</div>
+	</div>
+	<div class="form-group row">
+		<label for="text" class="col-sm-2 col-form-label">Date:</label>
+		<div class="col-sm-10">
+			<input type="date" class="form-control" id="date" name="user_date" required>
+		</div>
+	</div>
+	<div class="form-group row">
+		<label for="text" class="col-sm-2 col-form-label">Color:</label>
+		<div class="col-sm-10">
+			<input type="color" name="user_color" value="#e77755">
+		</div>
+	</div>
+	<div class="form-group row">
+		<label for="text" class="col-sm-2 col-form-label">File:</label>
+		<div class="col-sm-10">
+			<input type="file" name="user_file">
+		</div>
+	</div>
+	<div class="form-group form-check">
+		<input type="checkbox" class="form-check-input" id="exampleCheck1">
+	    	<label class="form-check-label" for="exampleCheck1">Checkbox</label>
+	  	</div>
+	</form>
+
+	<br>
+	<hr>
+	<br>
+	<h3>Inline Forms</h3>
+	<form class="form-inline">
+  <label class="sr-only" for="inlineFormInputName2">Name</label>
+  <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Jane Doe">
+
+  <label class="sr-only" for="inlineFormInputGroupUsername2">Username</label>
+  <div class="input-group mb-2 mr-sm-2">
+    <div class="input-group-prepend">
+      <div class="input-group-text">@</div>
+    </div>
+    <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Username">
+  </div>
+
+  <div class="form-check mb-2 mr-sm-2">
+    <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+    <label class="form-check-label" for="inlineFormCheck">
+      Remember me
+    </label>
+  </div>
+
+  <button type="submit" class="btn btn-primary mb-2">Submit</button>
 </form>
-<br>
-<br>
 
-<h3>&lt;input type="text","date","color","file","checkbox"&gt;</h3>
+	<br>
+	<hr>
+	<br>
+	<h1 id="btn-id">Buttons</h1>
 
-<form action="/sign-in-url" method="post">
-<ul>
-	<li>
-		<label for="text">text</label>
-		<input id="name" type="text" name="user_name">
-	</li>
-	<li>
-		<label for="text">date</label>
-		<input id="name" type="date" name="user_name">
-	</li>
-	<li>
-		<label for="text">color</label>
-		<input id="name" type="color" name="user_name" value="#e66465">
-	</li>
-	<li>
-		<label for="text">file</label>
-		<input id="name" type="file" name="user_name">
-	</li>
-		<li>
-		<label for="text">checkbox</label>
-		<input id="name" type="checkbox" name="user_name">
-	</li>
-</ul>
-</form>
+	<h3>Do you prefer Dogs or Cats?</h3>
 
-<h1 id="btn-id">Buttons</h1>
+	<h4>name="petChoice" inside < input tag > will link these two radio buttons choices in the same category so the user can choose just one option </h4>
 
-<h3>Do you prefer Dogs or Cats?</h3>
+	<form class="buble">
+		<ul>
+			<li> 
+				<!-- for="dogs" link with id="dogs" -->
+				<!-- value="Dogs or Cats" is important for you to know which choice the user chose after he/she submited the form -->
+			
+				<label for="dogs">Dogs</label>
+				<input name="petChoice" id="dogs" type="radio" value="Dogs">
+			</li>
+			<li>
+				<label for="cats">Cats</label>
+				<input name="petChoice" id="cats" type="radio" value="Cats">
+			</li>
+			<li class="button">
+				<button type="submit">submit</button>
+			</li>
+		</ul>	
+	</form>
 
-<h4>name="petChoice" inside < input tag > will link these two radio buttons choices in the same category so the user can choose just one option </h4>
+	<br>
+	<hr>
+	<br>
 
-<form class="buble">
-	<ul>
-		<li> 
-			<!-- for="dogs" link with id="dogs" -->
-			<!-- value="Dogs or Cats" is important for you to know which choice the user chose after he/she submited the form -->
-		
-			<label for="dogs">Dogs</label>
-			<input name="petChoice" id="dogs" type="radio" value="Dogs">
-		</li>
-		<li>
-			<label for="cats">Cats</label>
-			<input name="petChoice" id="cats" type="radio" value="Cats">
-		</li>
-		<li class="button">
-			<button type="submit">submit</button>
-		</li>
-	</ul>	
-</form>
+	<h3>What's your mood?</h3>
+	<h4>&lt;select tag&gt; you will get a dropdown menu</h4>
 
-<h3>What's your mood?</h3>
-<h4>&lt;select tag&gt; you will get a dropdown menu</h4>
-
-<form class="gold">
+	<form class="gold">
 		<!-- <select tag> you will get a dropdown menu -->
 		<select name="mood">
 			<option value="happy">happy (:</option>
@@ -148,12 +214,12 @@ placeholder: fill temporarely what the form field required-->
 			<option value="sad">sad ):</option>
 		</select>
 		<button type="submit">Go!</button>
-</form>
-<br>
-<br>
-<br>
+	</form>
+	<br>
+	<hr>
+	<br>
 
-<div class="fruits">
+	<div class="fruits">
 		<ol> 
 			<li> Red </li> 
 			<li> Orange </li> 
@@ -164,6 +230,50 @@ placeholder: fill temporarely what the form field required-->
 				</ul> 
 			</li> 
 		</ol> 
+	</div>
+
+
+	<br>
+	<hr>
+	<br>
+
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+  <label class="form-check-label" for="defaultCheck1">
+    Default checkbox
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled>
+  <label class="form-check-label" for="defaultCheck2">
+    Disabled checkbox
+  </label>
+</div>
+
+	<br>
+	<hr>
+	<br>
+
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+  <label class="form-check-label" for="exampleRadios1">
+    Default radio
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+  <label class="form-check-label" for="exampleRadios2">
+    Second default radio
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled>
+  <label class="form-check-label" for="exampleRadios3">
+    Disabled radio
+  </label>
+</div>
+<br>
+<br>
 </div>
 
 </body>
