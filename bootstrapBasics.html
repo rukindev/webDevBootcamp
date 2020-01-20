@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- to MAKE Bootstrap RESPONSIVE on Mobile add the following Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Bootstrap Basics</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	
+<!-- 	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+ -->	
+
+
+	<style type="text/css">
+		.pink {
+			background: pink;
+			height: 50px;
+		}
+		.blue {
+			background: #56CDF5;
+			height: 50px;
+		}
+		.yellow {
+			background: #F0F725;
+			height: 50px;
+		}
+		.gray {
+			background: #BFBFBF;
+			height: 50px;
+		}
+	</style>	
+</head>
+
+<body>
+<!-- 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" href="#">Koffee</a>
+		<button  class="navbar-toggle" type="button" data-toggle="collapse" data-target="#bs-nav-demo" aria-controls="navbarSupportedContents" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggle-icon"></span>
+		</button>
+
+     	<div class="collapse navbar-collapse" id="navbarSupportedContents">
+			  <ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="#">Home <span class="sr-only">(current)</span> </a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Link</a>
+				</li>		
+			  </ul>
+			  <ul class="nav navbar-nav navbar-right">
+				<li><a href="#">Sign Up</a></li>
+				<li><a href="#">Login</a></li>		
+			  </ul>			
+		    </div>
+		</div> 
+	</nav> --> 
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" id="navbarDropdown"  aria-haspopup="true" aria-expanded="false">Dropdown
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+  <div class="container">
+	    <h1>Bootstrap Basics</h1>
+  
+<!-- Buttons -->
+   <div class="container">
+        <div class="form-group">
+	    <button class="btn btn-danger btn-xs">Click Here</button>
+	    <button class="btn btn-success btn-xs active">Click Here</button>
+	    <button class="btn btn-success btn-xs" disabled="disabled">Click Here</button>
+
+  	    <a href="http://getbootstrap.com/docs/3.3/getting-started/#download" class="btn btn-info btn-lg">Get Bootstrap 3.3.7</a>
+  	    </div>
+
+<!-- Inline form-->
+  <div class="container">
+  <form class="form-inline">
+	  <div class="form-group">
+	    <label for="exampleInputName2">Name</label>
+	    <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+	  </div>
+	  <div class="form-group">
+	    <label for="exampleInputEmail2">Email</label>
+	    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+	  </div>
+
+	  <button type="submit" class="btn btn-default">Send invitation</button>
+  </form>
+	  <br>
+  </div>
+
+   </div>
+
+<!-- Jumbotron -->
+    <div class="jumbotron">
+    	<h1>This is Jumbotron!</h1>
+    	<p>Dandelion cucumber earthnut pea peanut soko zucchini</p>
+    	<button class="btn-success btn-lg">Hello</button>
+    </div>
+
+<!-- Form Example Code -->
+    <form>
+      <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+      </div>
+      <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+      </div>
+      <div class="form-group">
+      <label for="exampleInputFile">File input</label>
+      <input type="file" id="exampleInputFile">
+      <p class="help-block">Example block-level help text here.</p>
+      </div>
+      <div class="checkbox">
+      <label>
+      <input type="checkbox"> Check me out
+      </label>
+      </div>
+      <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+<br>
+</div>
+
+<!-- Grid System 2 Equal Columns-->
+<div class="container">
+		<p>2 columns (Equal)</p>
+	<div class="row">
+		<div class="col-lg-6 pink">COL LG 6</div>
+		<div class="col-lg-6 blue">COL LG 6</div>
+	</div>
+	
+</div>
+<br>
+
+<!-- Grid System 2 Unequal Columns-->
+<div class="container">
+		<p>2 columns (Unequal)</p>
+	<div class="row">
+		<div class="col-lg-3 pink">COL LG 3</div>
+		<div class="col-lg-9 blue">COL LG 9</div>
+	</div>
+	
+</div>
+<br>
+
+<!-- Grid System 3 Columns / .container-fluid (full-width) for proper alignment and padding.-->
+<div class="container">
+		<p>3 columns (Unequal)</p>
+	<div class="row">
+		<div class="col-lg-2 col-md-3 pink">COL LG 2</div>
+		<div class="col-lg-8 col-md-3 blue">COL LG 8</div>
+		<div class="col-lg-2 col-md-3 yellow">COL LG 2</div>
+	</div>
+	
+</div>
+<br>
+<!-- Grid System 4 Columns-->
+
+<div class="container">
+	<p>4 columns (Equal) / Splitting the 1st Column with more 2 Nested columns / Last Row Spit in 6 nested columns</p>
+	<div class="row">
+		<div class="col-md-3 col-sm-6 pink">
+			<div class="row">
+				<div class="col-md-6 col-sm-6 pink">First Half</div>
+				<div class="col-md-6 col-sm-6 gray">Other Half</div>	
+			</div>
+		</div>
+		<div class="col-md-3 col-sm-6 blue">Tour Schedule</div>
+		<div class="col-md-3 col-sm-6 yellow">Tour Schedule</div>
+		<div class="col-md-3 col-sm-6 gray">
+			<div class="row">
+				<div class="col-sm-2 pink">1st</div>
+				<div class="col-sm-2 gray">2nd</div>
+				<div class="col-sm-2 yellow">3rd</div>
+				<div class="col-sm-2 pink">4th</div>
+				<div class="col-sm-2 gray">5th</div>
+				<div class="col-sm-2 yellow">6th</div>
+				
+			</div>
+		</div>
+	</div>
+</div>
+
+<br>
+
+<!-- Grid System 6 Columns-->
+
+<div class="container">
+	<p>6 columns (Equal)</p>
+	<div class="row">
+		<div class="col-lg-2 pink">COL LG 2</div>
+		<div class="col-lg-2 yellow">COL LG 2</div>
+		<div class="col-lg-2 blue">COL LG 2</div>
+		<div class="col-lg-2 gray">COL LG 2</div>
+		<div class="col-lg-2 yellow">COL LG 2</div>
+		<div class="col-lg-2 pink">COL LG 2</div>
+	
+	</div>
+	
+</div>
+<br>
+<!-- Grid System 12 Columns-->
+
+<div class="container">
+	<p>12 columns (Equal)</p>
+	<div class="row">
+		<div class="col-lg-1 pink">COL LG 1</div>
+		<div class="col-lg-1 gray">COL LG 1</div>
+		<div class="col-lg-1 yellow">COL LG 1</div>
+		<div class="col-lg-1 blue">COL LG 1</div>
+		<div class="col-lg-1 pink">COL LG 1</div>
+		<div class="col-lg-1 gray">COL LG 1</div>
+		<div class="col-lg-1 yellow">COL LG 1</div>
+		<div class="col-lg-1 blue">COL LG 1</div>
+		<div class="col-lg-1 pink">COL LG 1</div>
+		<div class="col-lg-1 gray">COL LG 1</div>
+		<div class="col-lg-1 yellow">COL LG 1</div>
+		<div class="col-lg-1 blue">COL LG 1</div>	
+	</div>
+	
+</div>
+<br>
+<br>
+
+
+
+
+<!-- jQuery Link Has to Be Placed 1st-->
+<script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script> 
+
+<!-- Bootstrap JS CDN Link -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+
+</body>
+</html>
