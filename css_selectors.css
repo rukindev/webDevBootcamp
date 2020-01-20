@@ -1,0 +1,72 @@
+/*Element*/
+li {  }
+
+/*class*/
+/*you can target multiple elements to use the same style*/
+.hello {  }
+
+/*id selector*/
+/*they are rigid and don't allow for reuse. If possible first try to use a tag name,
+one of the new HTML5 elements, or even a pseud0-class*/
+#name {  }
+
+/*Star*/
+/*target every single element on the page - fine for quick tests - never use in production!*/
+/** {
+	border: 1px solid lightgrey;
+}*/
+
+/*Descendant Selector*/
+/*when you need to be more specific with your selectors*/
+li a {
+	color: sienna;
+	font-size: 14px;
+}
+
+/*Adjacent Selector*/
+/*select only the element that is immediatly preceded by the former element
+in this case only the ul after each h4*/
+h4 + ul {
+	border: 1px solid grey;
+}
+
+
+/*Attribute Selector*/
+/*this will style all anchor tags which links to google url*/
+a[href="http://www.google.com"] {
+	background: yellow;
+}
+
+/*nth of type*/
+/*this will target only the 3rd element of every li*/
+/* *** we can select ever other li using ( li:nth-of-type(even) )*** */
+li:nth-of-type(3){
+	background: lightgrey;
+}
+
+/* ( X:visited and X:link ) = We use the (:link) pseudo-class to target all anchors tags 
+which have to be clicked on. Alternatively (:visited) to apply specific styling to 
+only the anchor tags on the page which have been clicked on, or visited.
+a:link { color: blue; } a:visited { color: purple; }*/
+
+/*a:link {
+	color: indigo;
+}*/
+
+
+/*pseudo-class apply styling to only the anchor tags*/
+a:visited {
+	color: grey;
+}
+
+a:hover {
+	color: pink;
+}
+
+body {
+	font-family: roboto;
+	font-size: 16px;
+	padding-left: 16em;
+	padding-right: 16em;
+	padding-top: 2em;
+}

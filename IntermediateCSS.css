@@ -1,0 +1,129 @@
+/*font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Mono', monospace;
+font-family: 'Lobster', cursive;*/
+
+/*font-family*/
+/*font-size*/
+/*font-weight*/
+
+/*some fonts allow us to select a number between 100 to 800 (google fonts)*/
+/*line-height*/ /*Space between the Lines of the paragraphs*/
+
+/* em - is a dynamic size font - 2em; is the double of the 
+default size font of the browser's default font (16px) */
+/* if the default font size is 16px and you want 12px, them your
+font size will be 0.75em because (16/12=0.75) */
+
+/*text-align*/
+/* center; left; right; justify;*/
+/*text-justify: inter-word*/
+
+/*text-decoration*/
+/*line-through; overline; underline; underline overline;*/
+/*text-decoration-color: red; text-decoration-style: double; wavy;*/
+
+/*The text-transform Property
+text-transform: uppercase:
+LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT.
+text-transform: lowercase:
+lorem ipsum dolor sit amet, consectetur adipiscing elit.
+text-transform: capitalize:
+Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit.*/
+
+body {
+	background-color: mintcream;
+	font-family: 'Roboto Mono', monospace;
+}
+
+h1 {
+	font-family: 'Roboto', sans-serif;
+	font-size: 2em;
+	text-decoration: overline;
+    margin: 1.66%;	
+}
+
+p {
+	font-family: 'Roboto Mono', monospace;
+	font-size: 1em;
+	font-weight: normal;
+	line-height: 1.5;
+	text-align: justify;
+	text-justify: inter-word;
+	margin: 1.66%;
+}
+
+span {
+	font-size: 1.5em;
+	font-family: 'Lobster', cursive;
+}
+
+ol {
+	line-height: 2;
+	margin: 1.66%;
+}
+
+span {
+	text-decoration: line-through;
+}
+
+h3:nth-of-type(1) {
+  text-decoration: underline;
+  text-decoration-color: red;
+  text-decoration-style: double;
+  margin: 1.66%;  
+}
+
+h4 {
+  text-decoration: underline overline;
+  text-decoration-style: wavy;
+  text-decoration-color: gray;
+  margin: 1.66%;
+}
+
+a,  h2, img, h3 {
+	margin: 1.66%;
+}
+
+.claro {
+	color: grey;
+}
+/*link*/
+
+a:link {
+	color: indigo;
+}
+
+a:visited {
+	color: grey;
+}
+
+a:hover {
+	color: pink;
+}
+
+div {
+  color: grey;
+  text-align: justify;
+  text-justify: inter-word;
+  background-color: #f1f1f1;
+  width: 360px;
+  border: 15px solid #d1d1d1;
+  padding: 50px;
+  margin: 20px;
+}
+
+/*FLOAT */
+/*adding float we get rid of the white space between the elements so that we can control them*/
+.gallery {
+	width: 30%;
+	float: left;
+	margin: 1.66%
+}
+/*line below Image Gallery*/
+.gale {
+	border-bottom: 2px solid #d1d1d1;
+	width: 30%;
+	padding-bottom: 20px;
+}
+
+

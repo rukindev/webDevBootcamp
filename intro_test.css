@@ -1,0 +1,62 @@
+/* ( X > Y ) = Child combinator. The difference between (x y) and (x > y) is that the latter will
+only select direct children. ex.: 
+
+<div id="container">
+  <ul>
+    <li> List Item
+      <ul>
+        <li> Child </li>
+      </ul>
+    </li>
+    <li> List Item </li>
+    <li> List Item </li>
+    <li> List Item </li>
+  </ul>
+</div>
+
+A selector of ( #container > ul ) will only target the <ul>'s which are direct children of the (div)
+with an (id) of (container). It will no target the <ul> that is a children of the first <li>*/
+
+
+#container  ul {
+	background-color: yellow;
+}
+
+body {
+	padding-left: 2em;
+	padding-right: 20em;
+	background-color: powderblue;
+	text-align: justify-all;
+}
+
+.banner {
+	color: hotpink;
+}
+
+img {
+	width: 333px;
+}
+
+h1 + p {
+	font-family: roboto;
+	font-size: 16px;
+	color: hotpink;
+}
+
+/* ( X:visited and X:link ) = We use the (:link) pseudo-class to target all anchors tags 
+which have to be clicked on. Alternatively (:visited) to apply specific styling to 
+only the anchor tags on the page which have been clicked on, or visited.
+a:link { color: blue; } a:visited { color: purple; }*/
+
+a:link {
+	color: indigo;
+}
+
+a:visited {
+	color: grey;
+}
+
+a:hover {
+	color: pink;
+}
+

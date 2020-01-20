@@ -1,0 +1,68 @@
+	/*border color: #bdc3c7 
+	  date color: #3498db
+	  h2 color: #2c3e50 
+
+	  font: source san pro
+	  font-family: 'Roboto Mono', monospace;
+*/
+
+body {
+	background-color: mintcream;
+
+	/*Animation of border-color
+	Gradually change the border-color property from light grey to lightblue, then back.
+	CSS Animations do not work in Internet Explorer 9 and earlier versions*/
+	border: 20px solid #bdc3c7;
+	animation: mymove 15s infinite;
+	/*max width of the blog is 700px until the window
+	not longer is 700px, then it shrinks down to 80%
+	when it needed*/
+	max-width: 700px;
+	width: 80%;
+	/*margin 20px(top/ botton) - auto(left/ right) to center on the screen*/
+	margin: 20px auto;
+	padding: 10px 20px;
+	text-align: justify;
+	font-family: 'Roboto Mono', monospace;
+	font-weight: bold;
+	color: #2c3e50;
+}
+
+@keyframes mymove {
+  50% {border-color: lightblue;}
+}
+
+.date {
+	color: #3498db;
+	text-transform: uppercase;
+	/*take the normal letter size and add a little extra 0.2 
+	of the font-size to the letter-spacing*/
+	letter-spacing: 0.2rem;
+}
+
+h2 {
+	font-size: 2rem;
+	font-weight: bold;
+	color: #2c3e50;
+}
+
+h2 + p {
+	font-family: roboto Mono;
+	font-weight: bold;
+	border-left: 4px solid #bdc3c7;
+	animation: mymove 15s infinite;
+	padding-left: 10px;
+	color: #2c3e50;
+}
+
+.post {
+	margin-bottom: 20px;
+}
+
+/* Gradient transparent - color - transparent / search hr styles css*/
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}

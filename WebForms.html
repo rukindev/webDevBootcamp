@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Web Forms</title>
+
+	<link rel="stylesheet" type="text/css" href="Webforms.css">
+
+</head>
+
+<body>
+
+<h1>HTML Forms</h1>
+
+<p> 
+	Web forms are a very powerful tool for interacting with users — most commonly they are used for collecting data from users, or allowing them to control a user interface. </p>
+
+<p>	Web forms are one of the main points of interaction between a user and a web site or application. Forms allow users to enter data, which is generally sent to a web server for processing and storage, or used on the client-side to immediately update the interface in some way.</p>
+<p>
+	A web form's HTML is made up of one or more form controls (sometimes called widgets), plus some additional elements to help structure the overall form — they are often referred to as HTML forms. The controls can be single or multi-line text fields, dropdown boxes, buttons, checkboxes, or radio buttons, and are mostly created using the < input > element, although there are some other elements to learn about too.</p>
+<br>
+<br>
+<!-- We will use the following HTML elements: <form>, <label>, <input>, <textarea>, and <button>. -->
+
+<!-- <form action="/my-handling-form-page" method="post"> </form> -->
+<!-- 	action attribute defines (URL) where the form's collected data should be sent.
+	    method attribute defines which HTTP method to send the data with (usually get or post). -->
+
+<!-- The <label>, <input>, and <textarea> elements
+Our contact form is not complex: the data entry portion contains three text fields, each with a corresponding <label>:
+
+The input field for the name is a single-line text field.
+The input field for the e-mail is an input of type email: accepts only e-mail addresses.
+The input field for the message is a <textarea>; a multiline text field. 
+
+placeholder: fill temporarely what the form field required-->
+
+<!-- Form Validations: enforce rule/ instructions to a form - 
+	'Required' attribute validates that an input is not empty -->
+
+	<form action="/my-handling-form-page" method="post">
+ <ul>
+  <li>
+    <label for="name">Name:</label>
+    <input type="text" placeholder="John Doe" id="name" name="user_name">
+  </li>
+  <li>
+    <label for="mail">E-mail:</label>
+    <input type="email" placeholder="your@email" id="mail" name="user_mail" required>
+  </li>
+  <li>
+    <label for="msg">Message:</label>
+    <textarea  placeholder="type your message here" id="msg" name="user_message"></textarea>
+  </li>
+  <li class="button">
+  <button type="submit">Send your message</button>
+  </li>
+ </ul>
+</form>
+<!-- The <button> element also accepts a type attribute — this accepts one of three values: submit, reset, or button.
+	Submit button (the default value) sends the form's data to the web page defined by the action attribute of the <form> element.
+	Reset button resets all the form widgets to their default value immediately. From a UX point of view, this is considered bad practice, so you should avoid using this type of button unless you really have a good reason to include one.
+	Button button does... nothing! That sounds silly, but it's amazingly useful for building custom buttons — you can define their chosen functionality with JavaScript. -->
+
+	<!-- pattern="[A-Za-z0-9]{6,12}" letters and numbers between 6 to 12 characters in the password entry field
+	Title="Only letters & No between 6 and 12 characters" to show at alert box if the user didn't attend the request.
+	 ** inputmode="numeric" if the requirement of the password is to be numeric (such as PIN)-->
+<br>
+<br>
+<h3>A Simple Login Form</h3>
+<form class="buble" action="/sign-in-url" method="post">
+<ul>
+	<li>
+		<label for="name">Name:</label>
+		<input id="name/email" type="text"  name="user_name" placeholder="username or email" required>
+	</li>	
+	<li>
+		<label for="password">Password:</label>
+		<input id="password" type="password"  name="password" pattern="[A-Za-z0-9]{6,12}" title=" Only letters & No between 6 and 12 characters" placeholder="password"required>
+	</li>
+	<li class="button">
+		<button type="submit">Login</button>
+	</li>
+</ul>
+</form>
+<br>
+<br>
+
+<h3>&lt;input type="text","date","color","file","checkbox"&gt;</h3>
+
+<form action="/sign-in-url" method="post">
+<ul>
+	<li>
+		<label for="text">text</label>
+		<input id="name" type="text" name="user_name">
+	</li>
+	<li>
+		<label for="text">date</label>
+		<input id="name" type="date" name="user_name">
+	</li>
+	<li>
+		<label for="text">color</label>
+		<input id="name" type="color" name="user_name" value="#e66465">
+	</li>
+	<li>
+		<label for="text">file</label>
+		<input id="name" type="file" name="user_name">
+	</li>
+		<li>
+		<label for="text">checkbox</label>
+		<input id="name" type="checkbox" name="user_name">
+	</li>
+</ul>
+</form>
+
+<h1 id="btn-id">Buttons</h1>
+
+<h3>Do you prefer Dogs or Cats?</h3>
+
+<h4>name="petChoice" inside < input tag > will link these two radio buttons choices in the same category so the user can choose just one option </h4>
+
+<form class="buble">
+	<ul>
+		<li> 
+			<!-- for="dogs" link with id="dogs" -->
+			<!-- value="Dogs or Cats" is important for you to know which choice the user chose after he/she submited the form -->
+		
+			<label for="dogs">Dogs</label>
+			<input name="petChoice" id="dogs" type="radio" value="Dogs">
+		</li>
+		<li>
+			<label for="cats">Cats</label>
+			<input name="petChoice" id="cats" type="radio" value="Cats">
+		</li>
+		<li class="button">
+			<button type="submit">submit</button>
+		</li>
+	</ul>	
+</form>
+
+<h3>What's your mood?</h3>
+<h4>&lt;select tag&gt; you will get a dropdown menu</h4>
+
+<form class="gold">
+		<!-- <select tag> you will get a dropdown menu -->
+		<select name="mood">
+			<option value="happy">happy (:</option>
+			<option value="neutral">neutral |:</option>
+			<option value="sad">sad ):</option>
+		</select>
+		<button type="submit">Go!</button>
+</form>
+<br>
+<br>
+<br>
+
+<div class="fruits">
+		<ol> 
+			<li> Red </li> 
+			<li> Orange </li> 
+			<li> Yellow
+				<ul> 
+					<li> Banana </li>
+					<li> Sunflower </li>
+				</ul> 
+			</li> 
+		</ol> 
+</div>
+
+</body>
+</html>
