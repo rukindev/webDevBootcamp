@@ -1,0 +1,40 @@
+-------- GIT --------
+
+git commands:
+
+1. git clone https://... (clone your git repository)
+
+2. git status (show us the difference btw Us and GitHub)
+
+3. git add file.html / git add -A (to add all)
+
+4. git commit -m "your message" (if you type commit without -m, a full blow message screen will open, where you can write a more descriptive message - to leave that screen type esc :qw)
+
+5. git push (to sink the file to the repository)
+
+6. git pull (to pull down from github)
+
+7. git (show all git commands and what they do) 
+
+--------
+
+Sublime Text
+
+div>ul>li*5
+div#container>ul>li.homework-item*5 (#id)
+div.container>ul>li.homework-item*5 (.class)
+
+cmnd+shift+p - open command pallet
+type: package control : install package : emmet
+
+cmnd+p - GOTO - type :5 (to goto line 5)
+cmnd k + cmnd b - sidebar
+cmnd+d - select text
+cmnd+l - select entire line
+cmnd+shift+j - select all code that share immediate indetation
+cmnd+shift+a - select everything inside HTML tag
+cmnd+] - increase indent
+cmnd+[ - decrease indent
+ctrl+shift+k - delete line
+
+--------
