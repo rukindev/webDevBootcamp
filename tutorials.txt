@@ -38,3 +38,8 @@ cmnd+[ - decrease indent
 ctrl+shift+k - delete line
 
 --------
+
+Bootstrap
+
+
+https://getbootstrap.com/docs/4.4/components/alerts/ (to consult Bootstrap components)
