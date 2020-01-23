@@ -14,7 +14,7 @@ git commands:
 
 6. git pull (to pull down from github)
 
-7. git (show all git commands and what they do) 
+7. git (show all git commands and what they do)
 
 --------
 
@@ -36,6 +36,21 @@ cmnd+shift+a - select everything inside HTML tag
 cmnd+] - increase indent
 cmnd+[ - decrease indent
 ctrl+shift+k - delete line
+cmnd+f - find
+cmnd+h - replace
+
+--------
+Visual Studio Code Keyboard Shortcuts
+
+option+click - insert cursor
+option+shift+arrow(up or down) - insert(duplicate) line above / below
+cmnd+[ - decrease indent
+cmnd+] - increase indent
+cmnd+option+shift+left/right arrow - expand/ shrink selection
+option+cmnd+arrow(up or down) - add
+ctrl+g - go to line...
+
+
 
 --------
 
