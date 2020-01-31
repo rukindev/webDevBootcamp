@@ -1,0 +1,1119 @@
+JavaScript Basics
+
+objectives:
+
+1- Evaluate JS using the Developer Console (Chrome Developer Console) - Open up your browser write some JS and immediatly evaluate it.
+
+2- List of 5 Primitives Types
+
+3- Define Variables with var keyword to write code that defines JS variables.
+    Variables - really important part of JS. It's how to store little bits types of information. It's how it remember things and reference them latter.
+    It's one of the most basic, one of the most fundamental concepts that you have to master.
+
+4- Write code using console.log(); alert(); and prompt();
+
+
+--- Loops: Loops are used in order to automate a script instead of have to write a separate line of code.
+
+DRY - Don't Repeat Yourself (keep the code simple)
+
+--- While Loops - Repate the code WHILE the condition is TRUE;
+
+ex.1:
+    var count = 1
+    while(count < 8){
+        console.log("count is: " + count);
+        count++;
+    }
+
+    ** count++ //count by 1
+    ** count+=2 // count by 2
+
+ex.2:
+    var str = "hello";
+    var count = 0;
+    while(count<str.length){
+        console.log(str[count]);
+        count++;
+    }
+
+exercices:
+1- Print all numbers btw -10 and 19
+    var num = -10;
+    while(num<=19){
+        console.log(num);
+    } num++;
+
+2- Print all even numbers btw 10 and 40
+    var num = 10;
+    while(num<=40){
+        if (num % 2 === 0){
+        console.log(num);
+    } num++;
+
+3- Print all odd numbers btw 300 and 333
+    var num = 300;
+    while(num<=333){
+        if(num % 2 !== 0){
+        console.log(num);
+    } num++;
+    }
+
+4- Print all numbers divisible by 5 and 3 btw 5 and 50
+    var num = 5;
+    while(num<=50){
+        if(num % 5 === 0 && num % 3 === 0){
+        console.log(num);
+    } num++;
+    }
+
+Anoy- O - Matic
+    var answer = prompt("are we there yet?");
+    while(answer.indexOf("yes") === -1){   // use indexOf if anywhere in the answer you have the word "yes"
+        var answer = prompt("are we there yet?");
+    }
+    alert("Yay, We made it!");
+
+--- For Loops - Another way of repeating code.
+
+formula:
+    for(int; condition; step){
+        //run some code
+    }
+
+Print numbers btw 5 and 10 with a for loop:
+    for(var i = 5; i <= 10; i++){
+        console.log(i);
+    }
+
+    var str = "hello";
+    for(var i = 0; i<str.length, i++){
+        console.log(str[i]);
+    }
+
+print the numbers btw 1 and 100/ numbers divisible by 3 print = Creative/ numbers divisible by 5 print = Road / numbers divisible by 3 and 5 print = Creative Road
+    for (var i = 0; i <= 100; i++){
+        if (i % 5 === 0 && i % 3 === 0){
+            console.log("Creative Road");
+        } else if(i % 5 === 0){
+            console.log("Road");
+        } else (i % 3 === 0){
+            console.log("Creative");
+        } else{
+            console.log(i);
+        }
+    }
+
+----------FUNCTIONS-----------
+    // this function capitalize the first character in a string
+    //we can capture the RETURN value in a variables
+    //We have a variable city which is lower case "paris"
+    //and then I capitalize it with the function capitalize(city)
+    //and save the return value to a new variable.
+    //the RETURN keyword STOPS the execution of the function
+    // as soon as we return something the function is done.
+
+    function capitalize(str){
+      return str.charAt(0).toUpperCase()+str.slice(1);
+    }
+
+    var city = "paris";
+    var capital = capitalize(city);
+
+    console.log(capital); // Paris
+
+//we can implement the function if someone type a number instead of a string
+
+function capitalize(str){
+      if (typeof str === "number"){
+          return "That's not a string!"
+      } return str.charAt(0).toUpperCase()+str.slice(1);
+    }
+
+    var city = "paris";
+    var num = 37;
+    var capital = capitalize(num);
+    console.log(capital); // "That's not a string!"
+
+--------------FUNCTIONS------------------
+---- WRITTEN BY Brandon Morelli ---- at ("https://codeburst.io/")
+
+What is a Function?
+    - A function is a subprogram designed to perform a particular task.
+    - Functions are executed when they are called. This is known as invoking a function.
+    - Values can be passed into functions and used within the function.
+    - Functions always return a value. In JavaScript, if no return value is specified, the function will return undefined.
+    - Functions are objects.
+
+Define a Function.
+There are a few different ways to define a function in JavaScript:
+A Function Declaration defines a named function. To create a function declaration you use the function keyword followed by the name of the function. When using function declarations, the function definition is hoisted, thus allowing the function to be used before it is defined.
+    function name(parameters){statements}
+
+A Function Expressions defines a named or anonymous function. An anonymous function is a function that has no name. Function Expressions are not hoisted, and therefore cannot be used before they are defined. In the example below, we are setting the anonymous function object equal to a variable.
+    let name = function(parameters){
+      statements
+    }
+
+Arrow Functions have two main benefits:
+    1-A shorter syntax than typical functions
+    2-No binding of this
+
+An Arrow Function Expression is an anonymous function object that we set equal to a variable. The syntax consists of the function keyword, followed by zero or more parameters, and concludes with the function statements.
+    let name = (parameters) => {
+      statements
+    }
+
+A real world example looks like this:
+    let double = (num) => {
+      return num * 2;
+    }
+invoked:
+    double(3); // 6
+
+our arrow function can actually be simplified much more. So much more in fact, that the double function written above can also be written like this:
+    let double = num => num * 2;
+
+And yes, they are the exact the same function.
+
+Arrow Function Parameters
+
+With arrow function parameters, it’s important to remember that: The number of parameters in an arrow function affects the syntax of that function.
+If there are:
+    0 Parameters, arrow functions use empty parenthesis:
+        () => { statements }
+    1 Parameter, arrow functions can omit the parenthesis around the parameter:
+        parameter => { statements }
+    2+ Parameters, parameters go inside parenthesis:
+        (param1, param2, ...) => { statements }
+
+
+--- Function Return
+
+Every function in JavaScript returns undefined unless otherwise specified.
+Let’s test this by creating and invoking an empty function:
+    function test(){};
+    test();
+    // undefined
+
+Awesome, as expected, undefined is returned.
+Now, we can customize what is returned in our function by using the return keyword followed by our return value. Take a look at the code below:
+    function test(){
+      return true;
+    };
+    test(); // true
+
+In this example we explicitly tell the function to return true. When we invoke the function, that’s exactly what happens.
+But why is this important?
+It’s important because the value that a function returns, is actually returned to the caller of the function. Take a look at this code:
+
+    let double = function(num) {
+        return num * 2;
+    }
+This is a function expression that creates a function that will return two times the value of our input parameter num. We can then invoke the function and save the return value to a variable:
+
+    let test = double(3);
+
+When we log out our test value, we get 6:
+
+    console.log(test); // 6
+Awesome! The return variable not only returns values from a function, but it assigns them to whatever called the function!
+
+to call a NFEs(Name Function Expressions) in this case will be the same
+    let double = function foo(num){
+        return num * 2;
+    }
+
+    let test = double(5);
+    console.log(test); // 10
+
+Another important rule of the return statement is that it stops function execution immediately.
+
+Consider this example where we have two return statements in our test function:
+    function test(){
+      return true;
+      return false;
+    };
+    test();
+    // true
+
+The first return statement immediately stops execution of our function and causes our function to return true. The code on line three: return false; is never executed.
+
+--- Function Objects
+
+Functions are function objects. In JavaScript, anything that is not a primitive type ( undefined, null, boolean, number, or string) is an object. Objects in JavaScript are <extremely> versatile. Because of this, we can even pass a function as a parameter into another function.
+
+When a function accepts another function as a parameter, or returns a function, it is called a higher-order function. You’ve probably already used a bunch of higher order functions and don’t even know it: Array.prototype.mapand Array.prototype.filter are higher order functions (Just to name a couple). You can check out some of my previous articles to learn more about objects and higher order functions in JavaScript…
+
+
+----- Example arrow function expression -----
+Let’s say we had a getTweets function that took in a user id and, after hitting a poorly designed API, returned us all of the user’s Tweets with over 50 stars and retweets. Using promise chaining, that function may look something like this,
+
+function getTweets (uid) {
+  return fetch('https://api.users.com/' + uid)
+    .then(function (response) {
+      return response.json()
+    })
+    .then(function (response) {
+      return response.data
+    }).then(function (tweets) {
+      return tweets.filter(function (tweet) {
+        return tweet.stars > 50
+      })
+    }).then(function (tweets) {
+      return tweets.filter(function (tweet) {
+        return tweet.rts > 50
+      })
+    })
+}
+Well, it works. But it’s not the prettiest function in the world 🤷‍♀️. Even though this specific implementation is kind of dense, the idea is all too common. Let’s take a look at how what we know about arrow functions thus far, can improve our getTweets function.
+
+function getTweets (uid) {
+  return fetch('https://api.users.com/' + uid)
+    .then((response) => {
+      return response.json()
+    })
+    .then((response) => {
+      return response.data
+    }).then((tweets) => {
+      return tweets.filter((tweet) => {
+        return tweet.stars > 50
+      })
+    }).then((tweets) => {
+      return tweets.filter((tweet) => {
+        return tweet.rts > 50
+      })
+    })
+}
+OK, cool. It looks basically the same we just didn’t have to type function. Beneficial, but nothing worth Tweeting about. Let’s look at the next benefit of arrow functions, “implicit returns”.
+
+With arrow functions, if your function has a “concise body” (a fancy way for saying one line function), then you can omit the “return” keyword and the value will be returned automatically (or implicitly).
+
+So the add example from earlier can be updated to look like this,
+
+var add = function (x,y) {
+  return x + y;
+}
+
+var add = (x,y) => x + y;
+and more importantly, the getTweets example can be update to look like this,
+
+function getTweets (uid) {
+  return fetch('https://api.users.com/' + uid)
+    .then((response) => response.json())
+    .then((response) => response.data)
+    .then((tweets) => tweets.filter((tweet) => tweet.stars > 50))
+    .then((tweets) => tweets.filter((tweet) => tweet.rts > 50))
+}
+Now we’re talking 📈. That code is not only much easier to write, but more importantly, it’s much easier to read.
+
+Now, one further change we can make is that if the arrow function only has one parameter, you can omit the () around it. With that in mind, getTweets now looks like this,
+
+function getTweets (uid) {
+  return fetch('https://api.users.com/' + uid)
+    .then(response => response.json())
+    .then(response => response.data)
+    .then(tweets => tweets.filter(tweet => tweet.stars > 50))
+    .then(tweets => tweets.filter(tweet => tweet.rts > 50))
+}
+Overall, I’d say that’s a huge improvement in just about every category.
+
+
+--- Abstracting repetition\
+by Eloquent Javascript (https://eloquentjavascript.net/05_higher_order.html)
+
+Plain functions, as we’ve seen them so far, are a good way to build abstractions. But sometimes they fall short.
+
+It is common for a program to do something a given number of times. You can write a for loop for that, like this:
+
+    for (let i = 0; i < 10; i++) {
+      console.log(i);
+    }
+
+Can we abstract “doing something N times” as a function? Well, it’s easy to write a function that calls console.log N times.
+
+    function repeatLog(n) {
+      for (let i = 0; i < n; i++) {
+        console.log(i);
+      }
+    }
+
+But what if we want to do something other than logging the numbers? Since “doing something” can be represented as a function and functions are just values, we can pass our action as a function value.
+
+    function repeat(n, action) {
+      for (let i = 0; i < n; i++) {
+        action(i);
+      }
+    }
+
+    repeat(3, console.log);
+    // → 0
+    // → 1
+    // → 2
+
+We don’t have to pass a predefined function to repeat. Often, it is easier to create a function value on the spot instead.
+
+    let labels = [];
+    repeat(5, i => {
+      labels.push(`Unit ${i + 1}`);
+    });
+    console.log(labels);
+    // → ["Unit 1", "Unit 2", "Unit 3", "Unit 4", "Unit 5"]
+
+This is structured a little like a for loop—it first describes the kind of loop and then provides a body. However, the body is now written as a function value, which is wrapped in the parentheses of the call to repeat. This is why it has to be closed with the closing brace and closing parenthesis. In cases like this example, where the body is a single small expression, you could also omit the braces and write the loop on a single line.
+
+Higher-order functions
+Functions that operate on other functions, either by taking them as arguments or by returning them, are called higher-order functions. Since we have already seen that functions are regular values, there is nothing particularly remarkable about the fact that such functions exist. The term comes from mathematics, where the distinction between functions and other values is taken more seriously.
+
+--- Higher-order functions allow us to abstract over actions, not just values. They come in several forms. For example, we can have functions that create new functions.
+
+    function greaterThan(n) {
+      return m => m > n;
+    }
+    let greaterThan10 = greaterThan(10);
+    console.log(greaterThan10(11));
+    // → true
+And we can have functions that change other functions.
+
+    function noisy(f) {
+      return (...args) => {
+        console.log("calling with", args);
+        let result = f(...args);
+        console.log("called with", args, ", returned", result);
+        return result;
+      };
+    }
+    noisy(Math.min)(3, 2, 1);
+    // → calling with [3, 2, 1]
+    // → called with [3, 2, 1] , returned 1
+
+We can even write functions that provide new types of control flow.
+
+    function unless(test, then) {
+      if (!test) then();
+    }
+
+    repeat(3, n => {
+      unless(n % 2 == 1, () => {
+        console.log(n, "is even");
+      });
+    });
+    // → 0 is even
+    // → 2 is even
+There is a built-in array method, forEach, that provides something like a for/of loop as a higher-order function.
+
+    ["A", "B"].forEach(l => console.log(l));
+    // → A
+    // → B
+
+Script data set
+One area where higher-order functions shine is data processing. To process data, we’ll need some actual data. This chapter will use a data set about scripts—writing systems such as Latin, Cyrillic, or Arabic.
+
+Remember Unicode from Chapter 1, the system that assigns a number to each character in written language? Most of these characters are associated with a specific script. The standard contains 140 different scripts—81 are still in use today, and 59 are historic.
+
+The example data set contains some pieces of information about the 140 scripts defined in Unicode. It is available in the coding sandbox for this chapter as the SCRIPTS binding. The binding contains an array of objects, each of which describes a script.
+
+    {
+      name: "Coptic",
+      ranges: [[994, 1008], [11392, 11508], [11513, 11520]],
+      direction: "ltr",
+      year: -200,
+      living: false,
+      link: "https://en.wikipedia.org/wiki/Coptic_alphabet"
+    }
+Such an object tells us the name of the script, the Unicode ranges assigned to it, the direction in which it is written, the (approximate) origin time, whether it is still in use, and a link to more information. The direction may be "ltr" for left to right, "rtl" for right to left (the way Arabic and Hebrew text are written), or "ttb" for top to bottom (as with Mongolian writing).
+
+The ranges property contains an array of Unicode character ranges, each of which is a two-element array containing a lower bound and an upper bound. Any character codes within these ranges are assigned to the script. The lower bound is inclusive (code 994 is a Coptic character), and the upper bound is non-inclusive (code 1008 isn’t).
+
+Filtering arrays
+To find the scripts in the data set that are still in use, the following function might be helpful. It filters out the elements in an array that don’t pass a test.
+
+    function filter(array, test) {
+      let passed = [];
+      for (let element of array) {
+        if (test(element)) {
+          passed.push(element);
+        }
+      }
+      return passed;
+    }
+
+    console.log(filter(SCRIPTS, script => script.living));
+    // → [{name: "Adlam", …}, …]
+
+The function uses the argument named test, a function value, to fill a “gap” in the computation—the process of deciding which elements to collect.
+
+Note how the filter function, rather than deleting elements from the existing array, builds up a new array with only the elements that pass the test. This function is pure. It does not modify the array it is given.
+
+Like forEach, filter is a standard array method. The example defined the function only to show what it does internally. From now on, we’ll use it like this instead:
+
+    console.log(SCRIPTS.filter(s => s.direction == "ttb"));
+    // → [{name: "Mongolian", …}, …]
+
+Transforming with map
+Say we have an array of objects representing scripts, produced by filtering the SCRIPTS array somehow. But we want an array of names, which is easier to inspect.
+
+The map method transforms an array by applying a function to all of its elements and building a new array from the returned values. The new array will have the same length as the input array, but its content will have been mapped to a new form by the function.
+
+    function map(array, transform) {
+      let mapped = [];
+      for (let element of array) {
+        mapped.push(transform(element));
+      }
+      return mapped;
+    }
+
+    let rtlScripts = SCRIPTS.filter(s => s.direction == "rtl");
+    console.log(map(rtlScripts, s => s.name));
+    // → ["Adlam", "Arabic", "Imperial Aramaic", …]
+
+Like forEach and filter, map is a standard array method.
+
+Summarizing with reduce
+
+Another common thing to do with arrays is to compute a single value from them. Our recurring example, summing a collection of numbers, is an instance of this. Another example is finding the script with the most characters.
+
+The higher-order operation that represents this pattern is called reduce (sometimes also called fold). It builds a value by repeatedly taking a single element from the array and combining it with the current value. When summing numbers, you’d start with the number zero and, for each element, add that to the sum.
+
+The parameters to reduce are, apart from the array, a combining function and a start value. This function is a little less straightforward than filter and map, so take a close look at it:
+
+    function reduce(array, combine, start) {
+      let current = start;
+      for (let element of array) {
+        current = combine(current, element);
+      }
+      return current;
+    }
+
+    console.log(reduce([1, 2, 3, 4], (a, b) => a + b, 0));
+    // → 10
+
+The standard array method reduce, which of course corresponds to this function, has an added convenience. If your array contains at least one element, you are allowed to leave off the start argument. The method will take the first element of the array as its start value and start reducing at the second element.
+
+    console.log([1, 2, 3, 4].reduce((a, b) => a + b));
+    // → 10
+
+To use reduce (twice) to find the script with the most characters, we can write something like this:
+
+    function characterCount(script) {
+      return script.ranges.reduce((count, [from, to]) => {
+        return count + (to - from);
+      }, 0);
+    }
+
+    console.log(SCRIPTS.reduce((a, b) => {
+      return characterCount(a) < characterCount(b) ? b : a;
+    }));
+    // → {name: "Han", …}
+
+The characterCount function reduces the ranges assigned to a script by summing their sizes. Note the use of destructuring in the parameter list of the reducer function. The second call to reduce then uses this to find the largest script by repeatedly comparing two scripts and returning the larger one.
+
+The Han script has more than 89,000 characters assigned to it in the Unicode standard, making it by far the biggest writing system in the data set. Han is a script (sometimes) used for Chinese, Japanese, and Korean text. Those languages share a lot of characters, though they tend to write them differently. The (U.S.-based) Unicode Consortium decided to treat them as a single writing system to save character codes. This is called Han unification and still makes some people very angry.
+
+Composability
+
+Consider how we would have written the previous example (finding the biggest script) without higher-order functions. The code is not that much worse.
+
+    let biggest = null;
+    for (let script of SCRIPTS) {
+      if (biggest == null ||
+          characterCount(biggest) < characterCount(script)) {
+        biggest = script;
+      }
+    }
+    console.log(biggest);
+    // → {name: "Han", …}
+
+There are a few more bindings, and the program is four lines longer. But it is still very readable.
+
+Higher-order functions start to shine when you need to compose operations. As an example, let’s write code that finds the average year of origin for living and dead scripts in the data set.
+
+    function average(array) {
+      return array.reduce((a, b) => a + b) / array.length;
+    }
+
+    console.log(Math.round(average(
+      SCRIPTS.filter(s => s.living).map(s => s.year))));
+    // → 1165
+    console.log(Math.round(average(
+      SCRIPTS.filter(s => !s.living).map(s => s.year))));
+    // → 204
+
+So the dead scripts in Unicode are, on average, older than the living ones. This is not a terribly meaningful or surprising statistic. But I hope you’ll agree that the code used to compute it isn’t hard to read. You can see it as a pipeline: we start with all scripts, filter out the living (or dead) ones, take the years from those, average them, and round the result.
+
+You could definitely also write this computation as one big loop.
+
+    let total = 0, count = 0;
+    for (let script of SCRIPTS) {
+      if (script.living) {
+        total += script.year;
+        count += 1;
+      }
+    }
+    console.log(Math.round(total / count));
+    // → 1165
+
+But it is harder to see what was being computed and how. And because intermediate results aren’t represented as coherent values, it’d be a lot more work to extract something like average into a separate function.
+
+In terms of what the computer is actually doing, these two approaches are also quite different. The first will build up new arrays when running filter and map, whereas the second computes only some numbers, doing less work. You can usually afford the readable approach, but if you’re processing huge arrays, and doing so many times, the less abstract style might be worth the extra speed.
+
+Strings and character codes
+
+One use of the data set would be figuring out what script a piece of text is using. Let’s go through a program that does this.
+
+Remember that each script has an array of character code ranges associated with it. So given a character code, we could use a function like this to find the corresponding script (if any):
+
+    function characterScript(code) {
+      for (let script of SCRIPTS) {
+        if (script.ranges.some(([from, to]) => {
+          return code >= from && code < to;
+        })) {
+          return script;
+        }
+      }
+      return null;
+    }
+
+    console.log(characterScript(121));
+    // → {name: "Latin", …}
+The some method is another higher-order function. It takes a test function and tells you whether that function returns true for any of the elements in the array.
+
+But how do we get the character codes in a string?
+
+In Chapter 1 I mentioned that JavaScript strings are encoded as a sequence of 16-bit numbers. These are called code units. A Unicode character code was initially supposed to fit within such a unit (which gives you a little over 65,000 characters). When it became clear that wasn’t going to be enough, many people balked at the need to use more memory per character. To address these concerns, UTF-16, the format used by JavaScript strings, was invented. It describes most common characters using a single 16-bit code unit but uses a pair of two such units for others.
+
+UTF-16 is generally considered a bad idea today. It seems almost intentionally designed to invite mistakes. It’s easy to write programs that pretend code units and characters are the same thing. And if your language doesn’t use two-unit characters, that will appear to work just fine. But as soon as someone tries to use such a program with some less common Chinese characters, it breaks. Fortunately, with the advent of emoji, everybody has started using two-unit characters, and the burden of dealing with such problems is more fairly distributed.
+
+Unfortunately, obvious operations on JavaScript strings, such as getting their length through the length property and accessing their content using square brackets, deal only with code units.
+
+    // Two emoji characters, horse and shoe
+    let horseShoe = "🐴👟";
+    console.log(horseShoe.length);
+    // → 4
+    console.log(horseShoe[0]);
+    // → (Invalid half-character)
+    console.log(horseShoe.charCodeAt(0));
+    // → 55357 (Code of the half-character)
+    console.log(horseShoe.codePointAt(0));
+    // → 128052 (Actual code for horse emoji)
+
+JavaScript’s charCodeAt method gives you a code unit, not a full character code. The codePointAt method, added later, does give a full Unicode character. So we could use that to get characters from a string. But the argument passed to codePointAt is still an index into the sequence of code units. So to run over all characters in a string, we’d still need to deal with the question of whether a character takes up one or two code units.
+
+In the previous chapter, I mentioned that a for/of loop can also be used on strings. Like codePointAt, this type of loop was introduced at a time where people were acutely aware of the problems with UTF-16. When you use it to loop over a string, it gives you real characters, not code units.
+
+    let roseDragon = "🌹🐉";
+    for (let char of roseDragon) {
+      console.log(char);
+    }
+    // → 🌹
+    // → 🐉
+
+If you have a character (which will be a string of one or two code units), you can use codePointAt(0) to get its code.
+
+Recognizing text
+
+We have a characterScript function and a way to correctly loop over characters. The next step is to count the characters that belong to each script. The following counting abstraction will be useful there:
+
+    function countBy(items, groupName) {
+      let counts = [];
+      for (let item of items) {
+        let name = groupName(item);
+        let known = counts.findIndex(c => c.name == name);
+        if (known == -1) {
+          counts.push({name, count: 1});
+        } else {
+          counts[known].count++;
+        }
+      }
+      return counts;
+    }
+
+    console.log(countBy([1, 2, 3, 4, 5], n => n > 2));
+    // → [{name: false, count: 2}, {name: true, count: 3}]
+
+The countBy function expects a collection (anything that we can loop over with for/of) and a function that computes a group name for a given element. It returns an array of objects, each of which names a group and tells you the number of elements that were found in that group.
+
+It uses another array method—findIndex. This method is somewhat like indexOf, but instead of looking for a specific value, it finds the first value for which the given function returns true. Like indexOf, it returns -1 when no such element is found.
+
+Using countBy, we can write the function that tells us which scripts are used in a piece of text.
+
+    function textScripts(text) {
+      let scripts = countBy(text, char => {
+        let script = characterScript(char.codePointAt(0));
+        return script ? script.name : "none";
+      }).filter(({name}) => name != "none");
+
+      let total = scripts.reduce((n, {count}) => n + count, 0);
+      if (total == 0) return "No scripts found";
+
+      return scripts.map(({name, count}) => {
+        return `${Math.round(count * 100 / total)}% ${name}`;
+      }).join(", ");
+    }
+
+    console.log(textScripts('英国的狗说"woof", 俄罗斯的狗说"тяв"'));
+    // → 61% Han, 22% Latin, 17% Cyrillic
+
+The function first counts the characters by name, using characterScript to assign them a name and falling back to the string "none" for characters that aren’t part of any script. The filter call drops the entry for "none" from the resulting array since we aren’t interested in those characters.
+
+To be able to compute percentages, we first need the total number of characters that belong to a script, which we can compute with reduce. If no such characters are found, the function returns a specific string. Otherwise, it transforms the counting entries into readable strings with map and then combines them with join.
+
+Summary
+
+Being able to pass function values to other functions is a deeply useful aspect of JavaScript. It allows us to write functions that model computations with “gaps” in them. The code that calls these functions can fill in the gaps by providing function values.
+
+Arrays provide a number of useful higher-order methods. You can use forEach to loop over the elements in an array. The filter method returns a new array containing only the elements that pass the predicate function. Transforming an array by putting each element through a function is done with map. You can use reduce to combine all the elements in an array into a single value. The some method tests whether any element matches a given predicate function. And findIndex finds the position of the first element that matches a predicate.
+
+
+
+----- Factorial Number-----
+write a function factorial() which takes a single numeric argument and returns the factorial of that number
+    4! is 4 * 3 * 2 * 1 / 6! is 6 * 5 * 4 * 3 * 2 * 1 / 0! is 1
+
+let fact = (num) =>{
+    if(num === 0 || num === 1)
+        return 1;
+        for (var i = num - 1 ; i >= 1; i--){
+            num = num * i;
+        } return num
+}
+
+fact(3) //6  fact(4) //24  fact(5) //120  fact(0) //1  fact(1) //1
+
+---alternative---
+
+let foct = (num) =>{
+    var result = 1;
+    for(var i = 2; i <= num; i++){
+        result *= i
+    } return result;
+}
+console.log(fact(5)); //120  console.log(fact(4)); //24  console.log(fact(1)); //1  console.log(fact(0)); //
+
+------- KebabToSnake() -----
+write a function which takes a single kebab-cased string argument and returns the snake_cased string.
+
+let newChar = (str) =>{
+    var newStr = str.replace(/-/g, '_');  // you have to capture the new string to a new variable or it won't work
+    return newStr;
+}
+newChar("kebab-to-snake") //"kebab_to_snake"
+newChar("kebab-to-snake-to-Hello-World") //"kebab_to_snake_to_Hello_World"
+
+
+----- Scope -----
+
+A scope in JavaScript defines what variables you have access to. There are two kinds of scope – global scope and local scope.
+
+--- Global scope ---
+
+If a variable is declared outside all functions or curly braces ({}), it is said to be defined in the global scope.
+
+    ex: const globalVariable = 'some value'
+
+Once you've declared a global variable, you can use that variable anywhere in your code, even in functions.
+
+    const hello = 'Hello CSS-Tricks Reader!'
+
+    function sayHello () {
+     console.log(hello)
+    }
+
+    console.log(hello) // 'Hello CSS-Tricks Reader!'
+    sayHello() // 'Hello CSS-Tricks Reader!'
+
+Although you can declare variables in the global scope, it is advised not to. This is because there is a chance of naming collisions, where two or more variables are named the same. If you declared your variables with const or let, you would receive an error whenever a name collision happens. This is undesirable.
+
+    // Don't do this!
+    let thing = 'something'
+    let thing = 'something else' // Error, thing has already been declared
+
+If you declare your variables with var, your second variable overwrites the first one after it is declared. This also undesirable as you make your code hard to debug.
+
+    // Don't do this!
+    var thing = 'something'
+    var thing = 'something else' // perhaps somewhere totally different in your code
+    console.log(thing) // 'something else'
+    So, you should always declare local variables, not global variables.
+
+--- Local Scope ---
+
+Variables that are usable only in a specific part of your code are considered to be in a local scope. These variables are also called local variables.
+
+In JavaScript, there are two kinds of local scope:
+    1- block scope.
+    2- function scope
+
+Let's talk about function scopes first.
+
+--- Function scope ---
+
+When you declare a variable in a function, you can access this variable only within the function. You can't get this variable once you get out of it.
+
+In the example below, the variable hello is in the sayHello scope:
+
+    function sayHello () {
+      const hello = 'Hello CSS-Tricks Reader!'
+      console.log(hello)
+    }
+
+    sayHello() // 'Hello CSS-Tricks Reader!'
+    console.log(hello) // Error, hello is not defined
+
+--- Block scope ---
+
+When you declare a variable with const or let within a curly brace ({}), you can access this variable only within that curly brace.
+
+In the example below, you can see that hello is scoped to the curly brace:
+
+    {
+      const hello = 'Hello CSS-Tricks Reader!'
+      console.log(hello) // 'Hello CSS-Tricks Reader!'
+    }
+
+    console.log(hello) // Error, hello is not defined
+
+The block scope is a subset of a function scope since functions need to be declared with curly braces (unless you're using arrow functions with an implicit return).
+
+--- Function hoisting and scopes ---
+
+Functions, when declared with a function declaration, are always hoisted to the top of the current scope. So, these two are equivalent:
+
+    // This is the same as the one below
+    sayHello()
+    function sayHello () {
+      console.log('Hello CSS-Tricks Reader!')
+    }
+
+    // This is the same as the code above
+    function sayHello () {
+      console.log('Hello CSS-Tricks Reader!')
+    }
+    sayHello()
+
+When declared with a function expression, functions are not hoisted to the top of the current scope.
+
+    sayHello() // Error, sayHello is not defined
+    const sayHello = function () {
+      console.log(aFunction)
+    }
+
+Because of these two variations, function hoisting can potentially be confusing, and should not be used. Always declare your functions before you use them.
+
+--- Nested scopes ---
+
+When a function is defined in another function, the inner function has access to the outer function's variables. This behavior is called lexical scoping.
+
+However, the outer function does not have access to the inner function's variables.
+
+    function outerFunction () {
+      const outer = `I'm the outer function!`
+
+      function innerFunction() {
+        const inner = `I'm the inner function!`
+        console.log(outer) // I'm the outer function!
+      }
+
+      console.log(inner) // Error, inner is not defined
+    }
+
+To visualize how scopes work, you can imagine one-way glass. You can see the outside, but people from the outside cannot see you.
+
+-----  Var / Let / Const -----------
+(3 JULY 2018 by Prarthana S. Sannamani - FreeCodeCamp)
+
+--- var ---
+    1- global scope or function scope
+    2- value can be updated
+    3- can be re-declared
+    4- hoisted: registered in the scope, and initialized with undefined
+
+Below is a simple example where we initialize a variable, update its value, and re-declare it.
+
+    // Hoisted console.log(a); // undefined
+    var a = 10; console.log(a); // 10
+    a = 20; // value updated: OK console.log(a); // 20
+    var a = 30; // re-declared: OK console.log(a); // 30
+
+At the top of the scope, all variables are declared in their corresponding scope and initialized with a value of undefined. Registration and initialization are coupled. Thus, variable a is available for use from the top of the scope. So when we try to access the value of a before it is declared, it does not throw an error. Rather, undefined is printed. This is known as variable hoisting.
+
+Below is an example that shows the function scope of var.
+
+    function outerFunc() {  var a = 10;  if (a > 5) {    var a = 20;    console.log(a); // 20  }  console.log(a); // 20}
+
+Variable a is initially declared in the scope of outerFunc. Since the if block does not create a new scope, when we re-declare variable a, the earlier variable a gets wiped away and a new variable a gets created with a value of 20.
+
+Accidental re-declaration of var variables is a common mistake developers make due to silent re-declaration and confusion in understanding function scope.
+
+--- let ---
+    1- block scoped
+    2- value can be updated
+    3- cannot be re-declared
+    4- hoisted but not initialized
+
+Below is a simple example where we initialize a variable, update its value, and try to re-declare it.
+
+    console.log(a); //   ReferenceError: a is not defined
+    let a = 10; console.log(a); // 10
+    a = 20; console.log(a); // 20
+    let a = 30; // SyntaxError: Identifier 'a' has already been declared
+
+Updating a let variable is allowed. However, if you try to re-declare it, you encounter a SyntaxError. This protects developers from silent and accidental re-declaration of variables.
+
+Are let variables hoisted?
+
+This is a tricky question. The internet is divided on this: there are arguments for both sides. Some developers believe that let (and const) variables are not hoisted, because they cannot be accessed before their declaration statement is reached, unlike var. However, this answer really depends on your definition of hoisting. If hoisting is the coupling of the declaration and initialization phases of a variable at the top of its corresponding scope, then let and const variables are not hoisted.
+
+However, after reading several opinions and not being any closer to the truth, I decided to go with MDN’s definition of hoisting.
+
+    let bindings are created at the top of the (block) scope containing the declaration, commonly referred to as "hoisting". (MDN)
+
+According to this definition, the answer to our question is yes. let variables are hoisted, but they are not initialized with undefined. Thus, they exist in a time period called the “Temporal Dead Zone” from the start of the block until their definition is evaluated. Trying to access them in TDZ throws a ReferenceError, as seen in the example.
+
+Below is an example that shows block scope of let.
+
+    function outerFunc() {  let a = 10;  if (a > 5) {    let a = 20;    console.log(a); // 20  }  console.log(a); // 10}
+
+The first declaration of variable a is in the scope of outerFunc. The if block creates a new scope, and when we make the second declaration of variable a, it gets registered in the new scope. This is independent from the outerFunc scope. Hence, a separate variable a is created, and we can observe that changes to the inner variable a do not affect the outer variable a.
+
+This allows developers to easily create temporary variables inside condition and looping blocks, without having to search if the variable already exists in the function.
+
+--- const ---
+    1- block scoped
+    2- binding is immutable (but value may or may not be changed)
+    3- cannot be re-declared
+    4- hoisted but not initialized
+
+Below is a simple example where we initialize a variable, try to update its value, and try to re-declare it.
+
+    console.log(a); //  ReferenceError: a is not defined
+    const a = 10; console.log(a); // 10
+    a = 20; // TypeError: Assignment to constant variable.
+    const a = 30; // SyntaxError: Identifier 'a' has already been declared
+    const b; // SyntaxError: Missing initializer in const declaration
+
+Similar to let variables, const variables are hoisted, but not initialized with undefined. Trying to access them in the Temporal Dead Zone throws a ReferenceError.
+
+If we try to initialize a const variable without an assignment, as in the example above for const b; , we encounter a SyntaxError: Missing initializer in const declaration. Similarly, we cannot re-declare const variables. It leads to a SyntaxError.
+
+Let’s temporarily hold off our discussion of updating const variables.
+
+Below is an example of block level scope of const variables:
+
+    function outerFunc() {  const a = 10;  if (a > 5) {    const a = 20;    console.log(a); // 20  }  console.log(a); // 10}
+
+The above behavior is similar to let variables, where a new scope is created for the if block, and hence, changes to the inner variable a do not affect the outer variable a.
+
+Let’s return to the discussion of updating const variables.
+
+There is a common misunderstanding that const variables hold constant values, and cannot ever be updated. However, const works differently.
+
+After the initial assignment, the binding of const variables is immutable., and therefore, the reference to what is stored inside the const variable cannot be modified. In the simplest terms, this means you cannot have a statement with just the const variable on the left hand side, followed by an equal sign = , and a new value on the right hand side.
+
+However, whether the value can be updated depends on what is stored in it. Let’s consider the two cases:
+
+    1- Primitive data type: Boolean, Null, Undefined, Number, String, Symbol
+    2- Objects
+
+If a variable is assigned a primitive data type, the data type gets passed by value. Hence, if we have a statement let x = 10 , we can visualize x containing the Number 10.
+
+If a variable is assigned an object, the object is passed by reference. Hence, if we have a statement let x = [1,2,3], x does not contain the array [1,2,3] . Instead, it contains a reference (address) of where the array [1,2,3] is stored in memory after its creation. Hence, we can visualize x containing an address such as 5274621.
+
+Let’s see examples from primitive and object data types:
+
+    // Booleanconst a = true;a = false; // TypeError: Assignment to constant variable.
+    // Nullconst b = null;b = 10; // TypeError: Assignment to constant variable.
+    // Undefinedconst c = undefined;c = 10; // TypeError: Assignment to constant variable.
+    // Numberconst d = 50;d = 100; // TypeError: Assignment to constant variable.
+    // Stringconst e = 'hello';e = 'world'; // TypeError: Assignment to constant variable.
+    // Symbolconst f = Symbol('foo');f = 100; // TypeError: Assignment to constant variable.
+
+As we can see above, trying to update the value of any primitive data type results in a TypeError.
+
+    /* Arrays are stored by reference.Hence, although the binding is immutable, the values are not. */
+    const c = [1,2,3];
+    c.push(10); // No errorconsole.log(c); // [1,2,3,10]
+    c.pop(); // No errorconsole.log(c); // [1,2,3]
+    c = [4,5,6]; // TypeError: Assignment to constant variable.
+
+As we can see above, we can push and pop items from the array since this only modifies the contents of what the const variable is pointing to, but does not try to overwrite the contents of the const variable itself. However, if we try to update the binding of the const variable by re-assigning it a completely new array c = [4,5,6], it throws a TypeError.
+
+    /* Objects are stored by reference.Hence, although the binding is immutable, the values are not. */
+    const d = { name: 'John Doe', age: 35};
+    d.age = 40; // Modifying a property: No errorconsole.log(d); // { name: 'John Doe', age: 40};
+    d.zipCode = '52534'; // Adding a property: No errorconsole.log(d); // { age: 40, name: "John Doe", zipCode: '52534; }
+    d = { name: 'Mary Jane', age: 25}; // TypeError: Assignment to constant variable.
+
+As we can see above, we can modify and add properties to the object since this only modifies the contents of what the const variable is pointing to, but does not try to overwrite the contents of the const variable itself. However, if we try to update the binding of the const variable by re-assigning it a completely new object d = { name: 'Mary Jane', age: 25 };, it throws a TypeError.
+
+
+----- When should I use what? Var / Let / const -----
+
+JavaScript now has three kinds of variables, and a natural question is wondering when to use what.
+
+After the introduction of block-scoped let , the usage of var is generally discouraged to avoid confusion with function level scope, accidental re-declarations, and hoisting bugs with undefined value. Unless you have a compelling reason to use function scope of var, use let.
+
+Use const to hold values that are facts, such as const PI = 3.14, or values that should strictly remain unmodified for the entire execution of the program.
+
+A common programming approach consists of developers starting off by declaring all variables with const , and progressively converting them to let variables if the need arises. Personally, I start with let variables, and convert them to const variables if I see the need. There is no set approach, and you should use what works best for your code.
+
+
+
+-------- Closures --------
+
+Whenever you create a function within another function, you have created a closure. The inner function is the closure. This closure is usually returned so you can use the outer function's variables at a later time.
+
+    function outerFunction () {
+      const outer = `I see the outer variable!`
+
+      function innerFunction() {
+        console.log(outer)
+      }
+
+      return innerFunction
+    }
+
+    outerFunction()() // I see the outer variable!
+
+Since the inner function is returned, you can also shorten the code a little by writing a return statement while declaring the function.
+
+    function outerFunction () {
+      const outer = `I see the outer variable!`
+
+      return function innerFunction() {
+        console.log(outer)
+      }
+    }
+
+    outerFunction()() // I see the outer variable!
+
+Since closures have access to the variables in the outer function, they are usually used for two things:
+
+    1- To control side effects
+    2- To create private variables
+
+Controlling side effects with closures
+
+Side effects happen when you do something in aside from returning a value from a function. Many things can be side effects, like an Ajax request, a timeout or even a console.log statement:
+
+    function (x) {
+      console.log('A console.log is a side effect!')
+    }
+
+When you use closures to control side effects, you're usually concerned with ones that can mess up your code flow like Ajax or timeouts.
+
+Let's go through this with an example to make things clearer.
+
+Let's say you want to make a cake for your friend's birthday. This cake would take a second to make, so you wrote a function that logs made a cake after one second.
+
+I'm using ES6 arrow functions here to make the example shorter, and easier to understand.
+
+    function makeCake() {
+      setTimeout(_ => console.log(`Made a cake`), 1000)
+    }
+
+As you can see, this cake making function has a side effect: a timeout.
+
+Let's further say you want your friend to choose a flavor for the cake. To do so, you can write add a flavor to your makeCake function.
+
+    function makeCake(flavor) {
+      setTimeout(_ => console.log(`Made a ${flavor} cake!`), 1000)
+    }
+
+When you run the function, notice the cake gets made immediately after one second.
+
+    makeCake('banana')
+    // Made a banana cake!
+
+The problem here is that you don't want to make the cake immediately after knowing the flavor. You want to make it later when the time is right.
+
+To solve this problem, you can write a prepareCake function that stores your flavor. Then, return the makeCake closure within prepareCake.
+
+From this point on, you can call the returned function whenever you want to, and the cake will be made within a second.
+
+    function prepareCake (flavor) {
+      return function () {
+        setTimeout(_ => console.log(`Made a ${flavor} cake!`), 1000)
+      }
+    }
+
+    const makeCakeLater = prepareCake('banana')
+
+    // And later in your code...
+    makeCakeLater()
+    // Made a banana cake!
+
+That's how closures are used to reduce side effects – you create a function that activates the inner closure at your whim.
+
+Private variables with closures
+
+As you know by now, variables created in a function cannot be accessed outside the function. Since they can't be accessed, they are also called private variables.
+
+However, sometimes you need to access such a private variable. You can do so with the help of closures.
+
+    function secret (secretCode) {
+      return {
+        saySecretCode () {
+          console.log(secretCode)
+        }
+      }
+    }
+
+    const theSecret = secret('CSS Tricks is amazing')
+    theSecret.saySecretCode()
+    // 'CSS Tricks is amazing'
+
+saySecretCode in this example above is the only function (a closure) that exposes the secretCode outside the original secret function. As such, it is also called a privileged function.
+
+
+--- Debugging scopes with DevTools ---
+
+Chrome and Firefox's DevTools make it simple for you to debug variables you can access in the current scope. There are two ways to use this functionality.
+
+The first way is to add the debugger keyword in your code. This causes JavaScript execution in browsers to pause so you can debug.
+
+Here's an example with the prepareCake: Debugging prepareCake's scope
+ (img src = "https://i1.wp.com/css-tricks.com/wp-content/uploads/2017/08/debugger1.png?resize=1000%2C467&ssl=1")
+
+    function prepareCake (flavor) {
+      // Adding debugger
+      debugger
+      return function () {
+        setTimeout(_ => console.log(`Made a ${flavor} cake!`), 1000)
+      }
+    }
+
+    const makeCakeLater = prepareCake('banana')
+
+If you open your DevTools and navigate to the Sources tab in Chrome (or Debugger tab in Firefox), you would see the variables available to you.
+
+You can also shift the debugger keyword into the closure. Notice how the scope variables changes this time:
+Debugging the closure scope
+ (img src = "https://i0.wp.com/css-tricks.com/wp-content/uploads/2017/08/debugger2.png?resize=1000%2C468&ssl=1")
+
+    function prepareCake (flavor) {
+      return function () {
+        // Adding debugger
+        debugger
+        setTimeout(_ => console.log(`Made a ${flavor} cake!`), 1000)
+      }
+    }
+
+    const makeCakeLater = prepareCake('banana')
+
+
+The second way to use this debugging functionality is to add a breakpoint to your code directly in the sources (or debugger) tab by clicking on the line number.
+
+Debugging scopes by adding breakpoints:
+ (img src ="https://i2.wp.com/css-tricks.com/wp-content/uploads/2017/08/breakpoint.png?resize=1000%2C394&ssl=1")
+
+--- Wrapping up ---
+
+Scopes and closures aren't incredibly hard to understand. They're pretty simple once you know how to see them through a one-way glass.
+
+When you declare a variable in a function, you can only access it in the function. These variables are said to be scoped to the function.
+
+If you define any inner function within another function, this inner function is called a closure. It retains access to the variables created in the outer function.
+
+by Zell Liew - (https://css-tricks.com/javascript-scope-closures/)
+my blog (https://zellwk.com/blog/)
