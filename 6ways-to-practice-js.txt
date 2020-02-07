@@ -1,0 +1,54 @@
+6 tips on how you can practice Javascript
+
+by duomly
+
+Javascript is very often chosen as a first programming language. To become proficient in any programming language, you have to get familiar with the concepts of the particular programming language, syntax, and algorithms, but besides it, it’s very important to gain the experience. Practicing everything you’ve learned about the particular programming language is crazy important and will let you understand everything that may seem a little bit complicated in theory.
+
+When I started learning how to code in Javascript objects and inheritance seemed difficult to understand, and I couldn’t imagine when I can use it in real project, but when I started to write the code, I realized how important is to know the theory of the programming language to be able to provide a high-quality solution for the problem.
+
+A lot of people who start learning Javascript have no idea how they can practice the knowledge they’ve just learned. In this article, I’d like to share a few ways which helped me to practice my Javascript skills.
+
+P.S. I also prepared a Youtube video about the ways I’m going to describe here, so feel free to watch it and leave me your feedback :)
+
+
+1. Build projects
+These probably the most obvious point in this list, but it’s important. Don’t worry if you are a beginner; you don’t have to start from any advanced application, you can create a simple piece of code, like function changing the colors of the button. The most important in the process is to create a code and understand how it works. Besides experience which you can get by writing the code, you can gather all this in the repository and create your programming portfolio. At the end of the article, I’ll add a list of projects which you can do to practice your Javascript skills.
+
+2. Improve projects
+As the first point, I wrote about creating projects, the next thing you can do to practice your knowledge is to improve the code you created. If you've learned some more advanced things and have an idea how you can change the code, do it, try different ways to solve the same problems, measure the performance and pay attention to the good coding practices, then you are able to learn to build a high-quality code.
+
+Also, it’s a great idea to expand your projects. For example, if you were learning HTML and CSS first and build a layout now, you can add functionality in Javascript, or you created a listing of products, try to add a basket and make e-commerce.
+
+Remember that the main goal of the project is to learn and get some experience.
+
+3. Complete code challenges
+It may happen that you won’t be able to find an idea for a project to build, or maybe you are more advanced and would like to solve more advanced problems than a good idea may be to find some groups or websites where you can solve code challenges. It’s also possible to find those kinds of challenges in blog posts, articles, forums, etc.
+
+Solving more advances issues will bring you a lot of fun and can be helpful during a technical interview as you may be asked to explain something similar.
+
+Another advantage of this activity is that you often don’t have to build an entire application to practice solving a particular issue, especially if you are solving it in a ready platform with ready test cases.
+
+4. Join to open source project or start the collaboration with other developers
+It’s advice for those who have the junior level knowledge at least. Joining to the existing, open-source project will allow you to learn on a real-life application, and learn from other developers who work with you on the project. It’s also a huge plus in your resume.
+
+Besides that, collaborating with others on a project makes you learn the process of development as well.
+
+5. Join the community
+Javascript, as one of the most popular programming languages, has a huge, friendly community, and you can become a part of if. There are a lot of forums, groups, or even live meetups where you can participate, read interesting content, and try solving different programming problems.
+
+This is a great way to learn from other programmers in real-life situations, and it’s always a great thing to listen to advice and tips from people with more significant experience.
+
+Also, you can start sharing your knowledge with those who start learning and need some help or advice, which will give you the feeling of achieving the next level.
+
+6. Write a blog
+Nowadays, media like blogs or vlogs are crazy popular, and people share their everyday life with others easily. Why couldn’t you share your learning journey?
+I think it’s a great idea to start documenting what you’ve learned. It’s motivating while you get the community around your content of people who keep fingers crossed for your progress.
+
+Besides it, you can create blog posts about some Javascript programming concepts to help others, and explain it in your own way. Or do a video tutorial on how you practice your knowledge and build the application, or do a live coding stream. Possibilities are huge in this case.
+
+Conclusion
+In this article, I went through the six ideas on how you can practice your Javascript knowledge, but most of the ideas may be used to practice different programming languages as well.
+
+If you need some help with building your first projects, it’s a great idea to join an e-learning platform where you will get a ready environment and some instructions to start, like in some of the Duomly practice courses.
+
+I hope you will find this list helpful, and I encourage everyone who started learning the theory of programming to practice it as much as possible because it’s a great way to remember everything you already know in theory.
