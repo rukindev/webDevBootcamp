@@ -1,0 +1,81 @@
+body {
+    background-color: #232323;
+    font-family: roboto;
+    margin: 0;
+}
+.square {
+    width: 30%;
+    background-color: cadetblue;
+    padding-bottom: 30%;
+    float: left;
+    margin: 1.66%;
+    border-radius: 17%;
+    /* tensition effect */
+    transition: background-color 0.7s;
+    /* for browser compatibility - to add more support */
+    -webkit-transition: background-color 0.7s ;
+    -moz-transition: background-color 0.7s;
+}
+
+.container {
+    /* 20px margin top botton and auto - left and right */
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+h1 {
+    color: cornsilk;
+    font-weight: 400;
+    margin: 0;
+    background-color: rgb(245, 77, 77);
+    text-transform: uppercase;
+    line-height: 1.1; /* space between lines */
+    padding: 20px 0; /* only top and botton */
+    text-align: center;
+}
+
+#displayColor {
+    font-size: 169%; /* our span font 44% bigger than the rest of h1 */
+    color: ivory;
+}
+
+#message {
+    display: inline-block;
+    width: 20%; /* we have this span, although we don't have anything in it yet that take up 20% of the screen*/
+}
+
+#stripe {
+    background-color: cornsilk;
+    height: 30px;
+    text-align: center;
+}
+
+.selected {
+    color: cornsilk;
+    background-color: rgb(245, 77, 77);
+}
+
+button {
+    border: none;
+    background-color: cornsilk;
+    text-transform: uppercase;
+    height: 100%;
+    font-weight: 400;
+    color: rgb(245, 77, 77);
+    letter-spacing: 1px;
+    font-size: inherit;
+    transition: all 0.3s; /* 1st property: all transitions, 2nd how long it'll take */
+
+    /* for browser compatibility - to add more support */
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    outline: none;
+}
+
+button:hover {
+    color: cornsilk;
+    background-color: darksalmon;
+}
+
+
+
