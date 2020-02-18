@@ -4,7 +4,7 @@ by duomly
 
 Javascript is very often chosen as a first programming language. To become proficient in any programming language, you have to get familiar with the concepts of the particular programming language, syntax, and algorithms, but besides it, it’s very important to gain the experience. Practicing everything you’ve learned about the particular programming language is crazy important and will let you understand everything that may seem a little bit complicated in theory.
 
-When I started learning how to code in Javascript objects and inheritance seemed difficult to understand, and I couldn’t imagine when I can use it in real project, but when I started to write the code, I realized how important is to know the theory of the programming language to be able to provide a high-quality solution for the problem.
+When I started learning how to code in Javascript, objects and inheritance seemed difficult to understand, and I couldn’t imagine when I can use it in real project, but when I started to write the code, I realized how important is to know the theory of the programming language to be able to provide a high-quality solution for the problem.
 
 A lot of people who start learning Javascript have no idea how they can practice the knowledge they’ve just learned. In this article, I’d like to share a few ways which helped me to practice my Javascript skills.
 
@@ -34,7 +34,7 @@ It’s advice for those who have the junior level knowledge at least. Joining to
 Besides that, collaborating with others on a project makes you learn the process of development as well.
 
 5. Join the community
-Javascript, as one of the most popular programming languages, has a huge, friendly community, and you can become a part of if. There are a lot of forums, groups, or even live meetups where you can participate, read interesting content, and try solving different programming problems.
+Javascript, as one of the most popular programming languages, has a huge, friendly community, and you can become a part of it. There are a lot of forums, groups, or even live meetups where you can participate, read interesting content, and try solving different programming problems.
 
 This is a great way to learn from other programmers in real-life situations, and it’s always a great thing to listen to advice and tips from people with more significant experience.
 

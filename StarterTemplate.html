@@ -168,11 +168,158 @@
 </table>
 
 
+
+<br>
+<h4>Margins</h4>
+<p class="text-muted">You can setup margins from 0 to 5 - In this example, We setup extra-small=0, small=2, medium=3, large=4 and extra-large=5 </p>
+
+
+<!-- margins -->
+<button class="btn btn-primary p-4 mx-0 mx-sm-2 mx-md-3 mx-lg-4 mx-xl-5">Hello</button>
+<button class="btn btn-primary p-4 mx-0 mx-sm-2 mx-md-3 mx-lg-4 mx-xl-5">Hello</button>
+<button class="btn btn-primary p-4 mx-0 mx-sm-2 mx-md-3 mx-lg-4 mx-xl-5">Hello</button>
+<button class="btn btn-primary p-4 mx-0 mx-sm-2 mx-md-3 mx-lg-4 mx-xl-5">Hello</button>
 <br>
 <br>
+<hr class="my-4">
 <br>
+<h3>Display Utility</h3>
+<p class="text-muted">Display utility classes that apply to all <strong>breakpoints</strong>, from xs to xl. The classes are named using the format: <strong>.d-{value}</strong> for xs, and <strong>.d-{breakpoint}-{value}</strong> for sm, md, lg, and xl.</p>
+<p class="text-muted">Where values is one of: <strong>none, inline, inline-block, block, table, table-cell, table-row, flex, and inline-flex</strong> </p>
 <br>
+<h1 class="border border-primary bg-info text-white p-1 d-xl-inline">Hello World</h1>
+<p class="text-muted">d-xl-inline</p>
+<h1 class="border border-primary bg-info text-white p-1 d-xl-none">Hello World</h1>
+<p class="text-muted">d-xl-none (if you shrink your display below d-xl (breakpoint) the element will appear) </p>
+<h1 class="border border-primary bg-info text-white p-1 d-inline-block">Hello World</h1>
+<p class="text-muted">d-inline-block</p>
+<h1 class="border border-primary bg-info text-white p-1 d-none d-lg-block">Hello World</h1>
+<p class="text-muted">d-none d-lg-block (below d-lg show none. otherwise display block) </p>
+<h1 class="border border-primary bg-info text-white p-1 d-flex">Hello World</h1>
+<p class="text-muted">d-flex</p>
+<h1 class="border border-primary bg-info text-white p-1 d-inline-flex">Hello World</h1>
+<p class="text-muted">d-inline-flex</p>
+<br>
+<div class="container">
+  <p class="text-muted">Display is useful for riding content, in this jumbotron, we can ride the text below medium sizes screens < p class="lead d-none d-md-block" ></p>
+  <div class="jumbotron">
+    <h1 class="display-4">Hello, world!</h1>
+    <p class="lead d-none d-md-block">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem obcaecati nisi nemo, vitae aliquid at ipsam, ut quo eveniet sit molestias libero! Culpa ullam neque quidem nulla? Asperiores sint porro vel repudiandae ex perspiciatis iste, quo dignissimos. Adipisci molestias, voluptatem voluptates porro nobis accusantium totam. Nobis labore cupiditate corporis voluptates facilis quidem voluptate. Animi, nam saepe? A sequi ab harum, aperiam ipsa molestias asperiores iste error, dicta quos cum libero minus officia!</p>
+    <hr class="my-4">
+    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
   </div>
+</div>
+<h3>Grid + Flexbox</h3>
+<p class="text-muted">grid tied together with the flexbox utilities - for get more precise control of how things are aligned and spreads out across the row.</p>
+
+<p class="text-muted"> < div class="row border justify-content-end" > + < div class="col-sm-6 bg-info" ></p>
+<div class="row border justify-content-end">
+  <div class="col-sm-6 bg-info">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse, maxime sequi? Laudantium veniam quaerat dicta impedit recusandae error iure consectetur.
+  </div>
+</div>
+<br>
+<p class="text-muted">< div class="row border justify-content-around" > + 3 < div class="col-sm-3 bg-info" ></p>
+<div class="row border justify-content-around">
+  <div class="col-sm-3 bg-info">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse, maxime sequi? Laudantium veniam quaerat dicta impedit recusandae error iure consectetur.
+  </div>
+    <div class="col-sm-3 bg-info">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse, maxime sequi? Laudantium veniam quaerat dicta impedit recusandae error iure consectetur.
+  </div>
+    <div class="col-sm-3 bg-info">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse, maxime sequi? Laudantium veniam quaerat dicta impedit recusandae error iure consectetur.
+  </div>
+  </div>
+<br>
+<p class="text-muted">< div class="row border justify-content-between" > + 3 < div class="col-sm-3 bg-info" ></p>
+<div class="row border justify-content-between">
+    <div class="col-sm-3 bg-info">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse, maxime sequi? Laudantium veniam quaerat dicta impedit recusandae error iure consectetur.
+  </div>
+    <div class="col-sm-3 bg-info">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse, maxime sequi? Laudantium veniam quaerat dicta impedit recusandae error iure consectetur.
+  </div>
+    <div class="col-sm-3 bg-info">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse, maxime sequi? Laudantium veniam quaerat dicta impedit recusandae error iure consectetur.
+  </div>
+</div>
+<br>
+<br>
+<br>
+<h3>Colors</h3>
+<p class="text-muted">table < div class="align-middle justify-center" style="height: 200px; width: 200px; text-align: center; background:	#ff0000;" ></p>
+<div class="table-responsive">
+  <table class="table lead">
+    <tbody>
+      <tr>
+        <td class="align-middle justify-center" style="height: 200px; width: 200px; text-align: center; background:	#46070c;"><h4>#46070c</h4><p>rgb(70, 7, 12)</p></td>
+        <td class="align-middle justify-center" style="height: 200px; width: 200px; text-align: center; background:	#740b14;"><h4>#740b14</h4><p>rgb(116, 11, 20)/p></td>
+        <td class="align-middle justify-center" style="height: 200px; width: 200px; text-align: center; background:#a30f1c;"><h4>#a30f1c</h4><p>rgb(163, 15, 28)</p></td>
+        <td class="align-middle justify-center" style="height: 200px; width: 200px; text-align: center; background:	#d21423;"><h4>#d21423</h4><p>rgb(210, 20, 35)</p></td>
+      </tr>
+      <tr>
+        <td class="align-middle justify-center" style="height: 200px; width: 200px; text-align: center; background:	#672118;"><h4>#672118</h4><p>rgb(103, 33, 24)</p></td>
+        <td class="align-middle justify-center" style="height: 200px; width: 200px; text-align: center; background:#912f22;"><h4>#912f22</h4><p>rgb(145, 47, 34)</p></td>
+        <td class="align-middle justify-center" style="height: 200px; width: 200px; text-align: center; background:	#ba3c2c;"><h4>#ba3c2c</h4><p>rgb(186, 60, 44)</p></td>
+        <td class="align-middle justify-center" style="height: 200px; width: 200px; text-align: center; background:	#d35645;"><h4>#d35645</h4><p>rgb(211, 86, 69)</p></td>
+      </tr>
+      <tr>
+        <td class="align-middle justify-center" style="height: 200px; width: 200px; text-align: center; background:	#d8695a;"><h4>#d8695a</h4><p>rgb(216, 105, 90)</p></td>
+        <td class="align-middle justify-center" style="height: 200px; width: 200px; text-align: center; background:#e28e83;"><h4>#e28e83</h4><p>rgb(226, 142, 131)</p></td>
+        <td class="align-middle justify-center" style="height: 200px; width: 200px; text-align: center; background:	#ecb4ac;"><h4>#ecb4ac</h4><p>rgb(236, 180, 172)</p></td>
+        <td class="align-middle justify-center" style="height: 200px; width: 200px; text-align: center; background:	#f5d9d5;"><h4>#f5d9d5</h4><p>rgb(245, 217, 213)</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="conteiner-fluid mt-5">
+  <ul class="colour-list list-unstyled text-center my-0">
+    <li class="colour-entry light py-4" style="background: #d3d3d3;" >
+      <h3>#d3d3d3</h3>
+      <ul class="code-list list-unstyled">
+        <li><code class="text-dark rgb-value">rgb(211,211,211)</code></li>
+      </ul>
+    </li>
+  </ul>
+  <ul class="colour-list list-unstyled text-center my-0">
+    <li class="colour-entry  py-4" style="background: #f6a2a9;" >
+      <h3>#f6a2a9</h3>
+      <ul class="code-list list-unstyled">
+        <li><code class="text-dark rgb-value">rgb(246, 162, 169)</code></li>
+      </ul>
+    </li>
+  </ul>
+  <ul class="colour-list list-unstyled text-center my-0">
+    <li class="colour-entry  py-4" style="background: #f2737e;" >
+      <h3>#f2737e</h3>
+      <ul class="code-list list-unstyled">
+        <li><code class="text-dark rgb-value">rgb(242, 115, 126)</code></li>
+      </ul>
+    </li>
+  </ul>
+  <ul class="colour-list list-unstyled text-center my-0">
+    <li class="colour-entry  py-4" style="background: #ee4452;" >
+      <h3>#ee4452</h3>
+      <ul class="code-list list-unstyled">
+        <li><code class="text-dark rgb-value">rgb(238, 68, 82)</code></li>
+      </ul>
+    </li>
+  </ul>
+  <ul class="colour-list list-unstyled text-center my-0">
+    <li class="colour-entry  py-4" style="background: #ea1c2c;" >
+      <h3>#ea1c2c</h3>
+      <ul class="code-list list-unstyled">
+        <li><code class="text-dark rgb-value">rgb(234, 28, 44)</code></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+
+
+<br>
+<br>
+<br>
+<br>
+</div>
+
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

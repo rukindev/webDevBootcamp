@@ -147,10 +147,13 @@ What is a Function?
 
 Define a Function.
 There are a few different ways to define a function in JavaScript:
+
 A Function Declaration defines a named function. To create a function declaration you use the function keyword followed by the name of the function. When using function declarations, the function definition is hoisted, thus allowing the function to be used before it is defined.
+
     function name(parameters){statements}
 
 A Function Expressions defines a named or anonymous function. An anonymous function is a function that has no name. Function Expressions are not hoisted, and therefore cannot be used before they are defined. In the example below, we are setting the anonymous function object equal to a variable.
+
     let name = function(parameters){
       statements
     }
@@ -160,18 +163,23 @@ Arrow Functions have two main benefits:
     2-No binding of this
 
 An Arrow Function Expression is an anonymous function object that we set equal to a variable. The syntax consists of the function keyword, followed by zero or more parameters, and concludes with the function statements.
+
     let name = (parameters) => {
       statements
     }
 
 A real world example looks like this:
+
     let double = (num) => {
       return num * 2;
     }
+
 invoked:
+
     double(3); // 6
 
 our arrow function can actually be simplified much more. So much more in fact, that the double function written above can also be written like this:
+
     let double = num => num * 2;
 
 And yes, they are the exact the same function.
@@ -180,6 +188,7 @@ Arrow Function Parameters
 
 With arrow function parameters, it’s important to remember that: The number of parameters in an arrow function affects the syntax of that function.
 If there are:
+
     0 Parameters, arrow functions use empty parenthesis:
         () => { statements }
     1 Parameter, arrow functions can omit the parenthesis around the parameter:
@@ -188,16 +197,18 @@ If there are:
         (param1, param2, ...) => { statements }
 
 
---- Function Return
+--- Function **Return**
 
 Every function in JavaScript returns undefined unless otherwise specified.
 Let’s test this by creating and invoking an empty function:
+
     function test(){};
     test();
     // undefined
 
 Awesome, as expected, undefined is returned.
 Now, we can customize what is returned in our function by using the return keyword followed by our return value. Take a look at the code below:
+
     function test(){
       return true;
     };
@@ -210,6 +221,7 @@ It’s important because the value that a function returns, is actually returned
     let double = function(num) {
         return num * 2;
     }
+
 This is a function expression that creates a function that will return two times the value of our input parameter num. We can then invoke the function and save the return value to a variable:
 
     let test = double(3);
@@ -217,9 +229,11 @@ This is a function expression that creates a function that will return two times
 When we log out our test value, we get 6:
 
     console.log(test); // 6
+
 Awesome! The return variable not only returns values from a function, but it assigns them to whatever called the function!
 
 to call a NFEs(Name Function Expressions) in this case will be the same
+
     let double = function foo(num){
         return num * 2;
     }
@@ -230,6 +244,7 @@ to call a NFEs(Name Function Expressions) in this case will be the same
 Another important rule of the return statement is that it stops function execution immediately.
 
 Consider this example where we have two return statements in our test function:
+
     function test(){
       return true;
       return false;
